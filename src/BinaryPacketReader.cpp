@@ -49,7 +49,7 @@ CharSpan BinaryPacketReader::readSize(CharSpan data)
             (static_cast<std::uint32_t>(m_dataBuffer[0])) |
             (static_cast<std::uint32_t>(m_dataBuffer[1]) << 8) |
             (static_cast<std::uint32_t>(m_dataBuffer[2]) << 16) |
-            (static_cast<std::uint32_t>(m_dataBuffer[2]) << 24);
+            (static_cast<std::uint32_t>(m_dataBuffer[3]) << 24);
         // clang-format on
 
         m_dataBuffer.clear();
